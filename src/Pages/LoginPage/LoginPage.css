@@ -1,0 +1,78 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+
+.circle-div {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 8px solid #f1c40f; /* Adjust the color and width as needed */
+  position: absolute;
+  top: 50px; /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.circle-div::before {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  border-radius: 50%;
+  top: -70px;
+  left: -70px;
+  z-index: -1;
+}
+
+.circle-div img {
+  position: absolute;
+  max-width: 70px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  .animate-spin-slow {
+    animation: spin 10s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  .animate-scale {
+  animation: scale 2s ease-in-out infinite alternate;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+  
